@@ -17,14 +17,16 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons fab */
 import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faRedditAlien } from '@fortawesome/free-brands-svg-icons';
 
-/* import specific icons fas */
-import { faPlane, faEarthAmericas,faLaptopCode, faShoppingCart, faChartBar, faUtensils, faHome, faPaintBrush, faGamepad, faArrowUp, faBars } from '@fortawesome/free-solid-svg-icons'
+/* import specific icons fas, fa */
+import { faPlane, faCircleInfo,faEarthAmericas,faLaptopCode, faShoppingCart, faChartBar, faUtensils, faHome, faPaintBrush, faGamepad, faArrowUp, faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
+/* import specific icons far */
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons'
 
 
+
 /* add icons to the library */
-library.add(faFacebookF, faInstagram, faLinkedinIn, faTwitter, faRedditAlien, faPlane, faLaptopCode, faEarthAmericas,faShoppingCart, faChartBar, faUtensils, faHome, faPaintBrush, faGamepad, faArrowUp, faBars, faTimesCircle)
+library.add(faFacebookF, faCircleInfo, faInstagram, faArrowLeft, faLinkedinIn, faTwitter, faRedditAlien, faPlane, faLaptopCode, faEarthAmericas,faShoppingCart, faChartBar, faUtensils, faHome, faPaintBrush, faGamepad, faArrowUp, faBars, faTimesCircle)
 
 
 

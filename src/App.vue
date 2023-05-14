@@ -21,6 +21,7 @@
 
   <FooterPage></FooterPage>
 
+  <CookiesPolicy @revalidate-cookies="revalidateCookies()" v-if="cookiesRequested == false"></CookiesPolicy>
 </template>
 
 <script>
@@ -33,6 +34,7 @@ import MyResume from "@/components/HomePage/MyResume";
 import MyPortfolio from "@/components/HomePage/MyPortfolio";
 import ContactNow from "@/components/HomePage/ContactNow";
 import FooterPage from "@/components/FooterPage";
+import CookiesPolicy from "@/components/popups/CookiesPolicy";
 
 
 
@@ -47,9 +49,34 @@ export default {
     MyResume,
     MyPortfolio,
     ContactNow,
-    FooterPage
+    FooterPage,
+    CookiesPolicy
   },
-  //variables
+  data() {
+    return {
+      cookiesAccepted: false,
+      cookiesRequested: false
+    }
+  },
+  methods: {
+    revalidateCookies()
+    {
+      if (localStorage.getItem('cookies-policy') === null)
+      {
+        this.cookiesAccepted = false;
+        this.cookiesRequested = false;
+      }else if(localStorage.getItem('cookies-policy') === 'false') {
+        this.cookiesAccepted = false;
+        this.cookiesRequested = true;
+      }else{
+        this.cookiesAccepted = true;
+        this.cookiesRequested = true;
+      }
+    }
+  },
+  created() {
+    this.revalidateCookies();
+  },
 
 
 
