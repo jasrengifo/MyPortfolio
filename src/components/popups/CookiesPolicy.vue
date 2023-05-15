@@ -201,6 +201,8 @@ export default {
       // Guardar los datos, la firma y la fecha de expiración en la cookie
       document.cookie = `cookies_policy=${encryptedData}; expires=${expirationDate.toUTCString()}; path=/`;
       document.cookie = `cookies_policy_signature=${signature}; expires=${expirationDate.toUTCString()}; path=/`;
+
+      window.location.reload();
     }
   },
   mounted()

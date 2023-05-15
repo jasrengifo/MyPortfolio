@@ -10,7 +10,7 @@
         </li>
         <li>
           <font-awesome-icon icon="fas fa-earth-americas" class="color-sec" />
-          <select v-model="$i18n.locale">
+          <select v-model="$i18n.locale" @change="saveLangConf();">
             <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
               {{ locale }}
             </option>
@@ -44,9 +44,11 @@
 
 <script>
 
-
 export default {
   name: "MainMenu",
+  props: {
+    lang_cookie: String,
+  },
   data() {
     return {
       menuDesktop: [
@@ -69,18 +71,33 @@ export default {
       menuMobileStatus: false,
     }
   },
-  mounted() {
-  },
-
   methods: {
     toggleMenuMobile() {
 
       this.menuMobileStatus = !this.menuMobileStatus;
-        // $(".menu-caixa-mobile").addClass("animate__bounceInDown");
-        // $(".menu-caixa-mobile").removeClass("animate__bounceOutUp");
-        // $(".menu-caixa-mobile").removeClass('d-none');
-    }
+      // $(".menu-caixa-mobile").addClass("animate__bounceInDown");
+      // $(".menu-caixa-mobile").removeClass("animate__bounceOutUp");
+      // $(".menu-caixa-mobile").removeClass('d-none');
+    },
+    saveLangConf() {
+      if (this.lang_cookie) {
+        document.cookie = "lang_cookie=" + this.$i18n.locale;
+      }
+    },
+    loadLangConf() {
+      if (this.lang_cookie) {
+        let lang_cookie = this.$parent.getCookieValues("lang_cookie");
+        if (lang_cookie.value != null) {
+          console.log("cookie encontrada");
+          this.$i18n.locale = lang_cookie.value;
+        }
+      }
+    },
   },
+  created() {
+    this.loadLangConf();
+  },
+
 
 
 

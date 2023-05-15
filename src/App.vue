@@ -3,7 +3,7 @@
     <div id="header">
       <div class="container">
         <!-- Main Menu -->
-        <main-menu></main-menu>
+        <main-menu :lang_cookie="lang_cookie"></main-menu>
       </div>
       <MyPresentation></MyPresentation>
     </div>
@@ -58,6 +58,7 @@ export default {
       cookiesRequested: false,
       lls: 'K3ZyUcK2ZKqKgYGI6ELj58Is02vBy5BPWtk9RflUuemWMS1Ue/R3M/47LCOYwELUmKVbPh2nHSqHpvzf04qRly9fDxgCp/tqoqD4+inrZqyAqH4BrGwF40sQ2JBIydmnMku3IDneOm5WSolW9GtjzgL9gMLiRwhek7q8O+YK8kA=',
       allowed_cookies: null,
+      lang_cookie: null,
     }
   },
   methods: {
@@ -77,7 +78,6 @@ export default {
 
           if (name === 'cookies_policy') {
             cookieValue = value;
-
             //add = to the end of the value if it is not there
             if (cookieValue.substr(cookieValue.length - 1) !== '=') {
               cookieValue += '=';
@@ -86,6 +86,12 @@ export default {
             cookieSignature = value;
           }
 
+        }
+
+        if(cookieName == "lang_cookie"){
+          if (name === 'lang_cookie') {
+            cookieValue = value;
+          }
         }
 
 
@@ -177,10 +183,9 @@ export default {
 
     },
   },
-    mounted() {
+    created() {
       this.revalidateCookies();
-      console.log(this.thisCookieIsAllowed("lang_cookie"));
-
+      this.lang_cookie = this.thisCookieIsAllowed("lang_cookie");
     },
 
 
