@@ -63,6 +63,9 @@
 
 export default {
   name: "CookiesPolicy",
+  props: {
+    lls: String
+  },
   data() {
     return {
       screen: 1,
@@ -86,7 +89,14 @@ export default {
                 description: "Esta cookie es usada por mi portafolio online para recordar su desición sobre el uso de cookies y ajustar la web a su configuración de privacidad de datos.",
                 allow: true,
                 required: true
-              }
+              },
+              {
+                name: "cookies_policy_signature",
+                description: "Esta es una cookie de seguridad para firmar la cookie de política de cookies.",
+                allow: true,
+                required: true
+              },
+
             ]
           },
           {
@@ -159,9 +169,7 @@ export default {
       let vue = this;
       vue.screen = 0;
       vue.cookies_policy.allow_level = 2;
-      vue.cookies_policy.cookies_details.forEach(function (cookie_category) {
-        cookie_category.allowLevel = false;
-      });
+
       vue.saveCookie();
       setTimeout(() => {
         vue.$emit('revalidate-cookies');
@@ -173,11 +181,19 @@ export default {
     saveCookie(){
       let json_cookies_policy = JSON.stringify(this.cookies_policy);
 
-      const lls = 'K3ZyUcK2ZKqKgYGI6ELj58Is02vBy5BPWtk9RflUuemWMS1Ue/R3M/47LCOYwELUmKVbPh2nHSqHpvzf04qRly9fDxgCp/tqoqD4+inrZqyAqH4BrGwF40sQ2JBIydmnMku3IDneOm5WSolW9GtjzgL9gMLiRwhek7q8O+YK8kA=';
+      const lls = this.lls;
 
-      const encryptedData = this.$CryptoJS.AES.encrypt(json_cookies_policy, lls).toString();
+      let encryptedData = this.$CryptoJS.AES.encrypt(json_cookies_policy, lls).toString();
+
+      //add = to the end of the encrypted data if it doesn't have it
+      if(encryptedData.charAt(encryptedData.length-1) != "=")
+      {
+        encryptedData += "=";
+      }
 
       const signature = this.$CryptoJS.HmacSHA256(encryptedData, lls).toString();
+
+
 
       const currentDate = new Date();
       const expirationDate = new Date(currentDate.getTime() + 30 * 24 * 60 * 60 * 1000); // 30 days in millisecs
