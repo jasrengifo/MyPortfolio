@@ -6,6 +6,8 @@ import '../public/assets/css/theme.scss'
 
 import i18n from "@/assets/js/i18n";
 
+import VueCryptojs from 'vue-cryptojs'
+
 
 
 
@@ -32,4 +34,4 @@ library.add(faFacebookF, faCircleInfo, faInstagram, faArrowLeft, faLinkedinIn, f
 
 
 
-createApp(App).use(i18n).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
+createApp(App).use(i18n).use(VueCryptojs).component('font-awesome-icon', FontAwesomeIcon).mount('#app')

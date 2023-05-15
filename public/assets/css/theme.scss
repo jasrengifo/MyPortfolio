@@ -586,3 +586,7 @@ input[type=range]::-ms-thumb
     background-attachment: fixed
 
 
+
+.form-check-input:checked
+    background-color: $sec-green
+    border-color: $sec-green
