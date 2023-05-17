@@ -27,9 +27,10 @@ export default {
 </script>
 
 <style scoped>
-.delete-cookies-button{
+
+.delete-cookies-button {
   cursor: pointer;
-  color: #1CB698;
+  color: var(--sec-green);
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -38,7 +39,8 @@ export default {
   border-radius: 5px;
 }
 
-.delete-cookies-button:hover{
+
+.delete-cookies-button:hover {
   color: #fff;
   text-decoration: underline;
 }

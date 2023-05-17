@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '../public/assets/css/theme.scss'
+import '../public/assets/css/theme.css'
 
 
 import i18n from "@/assets/js/i18n";

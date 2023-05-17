@@ -20,7 +20,7 @@
                 <li><a href="https://www.instagram.com/rensr_/" target="_blank"><font-awesome-icon icon="fab fa-instagram" /></a></li>
                 <li><a href="https://www.linkedin.com/in/jhon-sanchez-207a33214/" target="_blank"><font-awesome-icon icon="fab fa-linkedin-in" /></a></li>
                 <li><a href="https://twitter.com/RensRDev" target="_blank"><font-awesome-icon icon="fab fa-twitter" /></a></li>
-                <li><a href="#"><font-awesome-icon icon="fab fa-reddit-alien" /></a></li>
+                <li><a href="#"><font-awesome-icon icon="fab fa-github" /></a></li>
               </ul>
             </div>
           </div>

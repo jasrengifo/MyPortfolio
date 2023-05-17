@@ -230,7 +230,7 @@ export default {
     position: fixed;
     bottom: 0px;
     right: 0px;
-    background-color: #191e21;
+    background-color: var(--quar-dark);
     color: #ffffff;
     text-align: center;
     padding-top: 10px;
@@ -244,15 +244,15 @@ export default {
 
   .cookies-buttons .btn-outline-warning:hover
   {
-    color: #191e21;
-    border-color: #191e21;
+    color: var(--quar-dark);
+    border-color: var(--quar-dark);
   }
 
 
   .cookies-back-main:hover, .cookies-info-button:hover
   {
     cursor: pointer;
-    color: #1CB698;
+    color: var(--sec-green);
   }
 
 
@@ -287,13 +287,13 @@ export default {
 
   .cookies-buttons .btn-success
   {
-    background-color: #1CB698;
+    background-color: var(--sec-green);
   }
 
   .cookies-buttons .btn-success:hover
   {
     color: #ffffff;
-    background-color: #12705a;
+    background-color: var(--sec-green);
   }
 
   .customize-cookies
@@ -306,6 +306,6 @@ export default {
   .customize-cookies:hover
   {
     text-decoration: underline;
-    color: #1CB698;
+    color: var(--sec-green);
   }
 </style>
