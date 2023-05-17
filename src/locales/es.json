@@ -75,5 +75,26 @@
   "Su email": "Su correo electrónico",
   "Asunto": "Asunto",
   "Mensaje": "Mensaje",
-  "Enviar": "Enviar"
+  "Enviar": "Enviar",
+
+  "Esta web utiliza Cookies": "Esta web utiliza Cookies",
+  "Personalizar": "Personalizar",
+  "Aceptar todas": "Aceptar todas",
+  "Rechazar todas": "Rechazar todas",
+  "Guardar configuración": "Guardar configuración",
+  "Ver cookies": "Ver cookies",
+  "Cookies Técnicas": "Cookies Técnicas",
+  "Hola, mi portafolio online utiliza algunas cookies para mejorar y optimizar el contenido que deseo mostrarte. No te preocupes, podrás volver a modificar tu configuración desde el footer de esta web cuando quieras.": "Hola, mi portafolio online utiliza algunas cookies para mejorar y optimizar el contenido que deseo mostrarte. No te preocupes, podrás volver a modificar tu configuración desde el footer de esta web cuando quieras.",
+  "Estas cookies garantizan el buen funcionamiento de mi portafolio online, son usadas para ejecutar funciones vitales como por ejemplo la seguridad y la navegación. Por ese motivo son obligatorias.": "Estas cookies garantizan el buen funcionamiento de mi portafolio online, son usadas para ejecutar funciones vitales como por ejemplo la seguridad y la navegación. Por ese motivo son obligatorias.",
+  "Esta cookie es usada por Google Recaptcha, es necesaria para la seguridad y la integridad de mi portafólio online.": "Esta cookie es usada por Google Recaptcha, es necesaria para la seguridad y la integridad de mi portafólio online.",
+  "Esta cookie es usada por mi portafolio online para recordar su desición sobre el uso de cookies y ajustar la web a su configuración de privacidad de datos.": "Esta cookie es usada por mi portafolio online para recordar su desición sobre el uso de cookies y ajustar la web a su configuración de privacidad de datos.",
+  "Esta es una cookie de seguridad para firmar la cookie de política de cookies.": "Esta es una cookie de seguridad para firmar la cookie de política de cookies.",
+  "Esta cookie es usada por Google Analytics para distinguir a los usuarios y me permite almacenar el numero de veces que mi portafolio online ha sido visitado.": "Esta cookie es usada por Google Analytics para distinguir a los usuarios y me permite almacenar el numero de veces que mi portafolio online ha sido visitado.",
+  "Son aquéllas que le permitirán acceder a mi portafolio online con algunas características predefinidas y que dependiendo de las características de su dispositiov y/o navegador, servirán para ofrecer un mejor servicio, sirven por ejemplo para configurar el idioma, para adaptar el contenido al navegador/dispositivo que está utilizando, para guardar su configuración regional, etc.": "Son aquéllas que le permitirán acceder a mi portafolio online con algunas características predefinidas y que dependiendo de las características de su dispositiov y/o navegador, servirán para ofrecer un mejor servicio, sirven por ejemplo para configurar el idioma, para adaptar el contenido al navegador/dispositivo que está utilizando, para guardar su configuración regional, etc.",
+  "Esta cookie propia de mi portafolio online y sirve para recordar el idioma que configuró.": "Esta cookie propia de mi portafolio online y sirve para recordar el idioma que configuró.",
+  "Cookies Analíticas": "Cookies Analíticas",
+  "Cookies de Personalización": "Cookies de Personalización",
+  "Detalles": "Detalles",
+
+  "Revocar configuración de cookies": "Revocar configuración de cookies"
 }

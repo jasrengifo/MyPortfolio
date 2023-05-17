@@ -2,18 +2,18 @@
 
   <!--main cookies-->
   <div id="cookies-main" class="cookies-main" v-if="screen==1">
-    <div class="cookies-title"><h4>Esta web utiliza Cookies</h4></div>
-    <div class="cookies-desc">Hola, mi portafolio online utiliza algunas cookies para mejorar y optimizar el contenido que deseo mostrarte. No te preocupes, podrás volver a modificar tu configuración desde el footer de esta web cuando quieras.</div>
+    <div class="cookies-title"><h4>{{ $t("Esta web utiliza Cookies") }}</h4></div>
+    <div class="cookies-desc">{{ $t("Hola, mi portafolio online utiliza algunas cookies para mejorar y optimizar el contenido que deseo mostrarte. No te preocupes, podrás volver a modificar tu configuración desde el footer de esta web cuando quieras.") }}</div>
     <div class="cookies-buttons">
-      <button class="btn btn-outline-light ver-cookies" @click="screen = 2">Personalizar</button>
-      <button class="btn btn-success accept-cookies" @click="allowAll()">Aceptar todas</button>
-      <div><div class="customize-cookies" @click="refuseAll()">Rechazar todas</div></div>
+      <button class="btn btn-outline-light ver-cookies" @click="screen = 2">{{ $t("Personalizar") }}</button>
+      <button class="btn btn-success accept-cookies" @click="allowAll()">{{ $t("Aceptar todas") }}</button>
+      <div><div class="customize-cookies" @click="refuseAll()">{{ $t("Rechazar todas") }}</div></div>
     </div>
   </div>
 
   <!--cookies category details-->
   <div id="cookies-conf-main" class="cookies-main" v-else-if="screen==2">
-    <div class="cookies-title"><h4><font-awesome-icon icon="fas fa-arrow-left" class="float-start cookies-back-main px-2" @click="screen = 1" /> Configuración de cookies</h4></div>
+    <div class="cookies-title"><h4><font-awesome-icon icon="fas fa-arrow-left" class="float-start cookies-back-main px-2" @click="screen = 1" /> {{ $t("Configuración de cookies") }}</h4></div>
     <div class="cookies-desc">
       <div class="row">
         <div class="cookie-item col-12" v-for="(cookie, index) in cookies_policy.cookies_details" :index="index" :key="cookie.id">
@@ -27,23 +27,23 @@
 
     </div>
     <div class="cookies-buttons">
-      <button class="btn btn-success accept-cookies" @click="saveConfig()">Guardar configuración</button>
+      <button class="btn btn-success accept-cookies" @click="saveConfig()">{{ $t("Guardar configuración") }}</button>
     </div>
   </div>
 
   <!--cookies category description details-->
   <div id="cookies-info-main" class="cookies-main" v-else-if="screen==3">
-    <div class="cookies-title"><h4><font-awesome-icon icon="fas fa-arrow-left" class="float-start cookies-back-main px-2" @click="screen = 2" /> {{ cookies_policy.cookies_details[cookies_details_info].category }}</h4></div>
-    <div class="cookies-desc">{{ cookies_policy.cookies_details[cookies_details_info].description }}</div>
-    <div><div class="customize-cookies" @click="screen=4">Ver cookies</div></div>
+    <div class="cookies-title"><h4><font-awesome-icon icon="fas fa-arrow-left" class="float-start cookies-back-main px-2" @click="screen = 2" /> {{ $t(cookies_policy.cookies_details[cookies_details_info].category) }}</h4></div>
+    <div class="cookies-desc">{{ $t(cookies_policy.cookies_details[cookies_details_info].description) }}</div>
+    <div><div class="customize-cookies" @click="screen=4">{{ $t("Ver cookies") }}</div></div>
   </div>
 
 
   <!--cookies individual details-->
   <div id="cookies-details-info-main" class="cookies-main" v-else-if="screen==4">
-    <div class="cookies-title"><h4><font-awesome-icon icon="fas fa-arrow-left" class="float-start cookies-back-main px-2" @click="screen = 2" /> {{ cookies_policy.cookies_details[cookies_details_info].category }} (Detalles)</h4></div>
+    <div class="cookies-title"><h4><font-awesome-icon icon="fas fa-arrow-left" class="float-start cookies-back-main px-2" @click="screen = 2" /> {{ $t(cookies_policy.cookies_details[cookies_details_info].category) }} ({{ $t("Detalles") }})</h4></div>
     <div class="cookie-item col-12" v-for="(cookie_details, index) in cookies_policy.cookies_details[cookies_details_info].cookies" :index="index" :key="cookie_details.id">
-      {{ cookie_details.name }} <font-awesome-icon icon="fas fa-circle-info" @click="screen=5; cookies_individual_info=index" class=" cookies-back-main" />
+      {{ $t(cookie_details.name) }} <font-awesome-icon icon="fas fa-circle-info" @click="screen=5; cookies_individual_info=index" class=" cookies-back-main" />
       <div class="form-check form-switch d-inline-block">
         <input class="form-check-input" type="checkbox" role="switch" v-model="cookie_details.allow" checked :disabled="cookie_details.required">
       </div>
@@ -52,8 +52,8 @@
 
   <!--cookies individual info-->
   <div id="cookies-individual-info-main" class="cookies-main" v-else-if="screen==5">
-    <div class="cookies-title"><h4><font-awesome-icon icon="fas fa-arrow-left" class="float-start cookies-back-main px-2" @click="screen = 4" /> {{ cookies_policy.cookies_details[cookies_details_info].category }} (Detalles)</h4></div>
-    <div class="cookies-desc">{{ cookies_policy.cookies_details[cookies_details_info].cookies[cookies_individual_info].description }}</div>
+    <div class="cookies-title"><h4><font-awesome-icon icon="fas fa-arrow-left" class="float-start cookies-back-main px-2" @click="screen = 4" /> {{ $t(cookies_policy.cookies_details[cookies_details_info].category) }} ({{ $t("Detalles") }})</h4></div>
+    <div class="cookies-desc">{{ $t(cookies_policy.cookies_details[cookies_details_info].cookies[cookies_individual_info].description) }}</div>
   </div>
 
 </template>
@@ -74,7 +74,7 @@ export default {
         cookies_details: [
           {
             category: "Cookies Técnicas",
-            description: "Estas cookies garantizan el buen funcionamiento de mi portafolio online, son usadas para ofrecer funciones importantes como por ejemplo la seguridad y la navegación. Por ese motivo son obligatorias.",
+            description: "Estas cookies garantizan el buen funcionamiento de mi portafolio online, son usadas para ejecutar funciones vitales como por ejemplo la seguridad y la navegación. Por ese motivo son obligatorias.",
             allowLevel: true,
             required: true,
             cookies: [
@@ -115,7 +115,7 @@ export default {
           },
           {
             category: "Cookies de Personalización",
-            description: "Son aquéllas que le permitirán acceder a mi portafolio online con algunas características predefinidas y que dependiendo de las características de su dispositiov y/o navegador, servirán para ofrecer un mejor servicio, sirven por ejemplo para configurar el idioma, para validar el tipo de navegador que está utilizando, para realizar configuración regional desde donde accede al servicio, etc.",
+            description: "Son aquéllas que le permitirán acceder a mi portafolio online con algunas características predefinidas y que dependiendo de las características de su dispositiov y/o navegador, servirán para ofrecer un mejor servicio, sirven por ejemplo para configurar el idioma, para adaptar el contenido al navegador/dispositivo que está utilizando, para guardar su configuración regional, etc.",
             allowLevel: true,
             required: false,
             cookies: [
@@ -199,8 +199,8 @@ export default {
       const expirationDate = new Date(currentDate.getTime() + 30 * 24 * 60 * 60 * 1000); // 30 days in millisecs
 
       // Guardar los datos, la firma y la fecha de expiración en la cookie
-      document.cookie = `cookies_policy=${encryptedData}; expires=${expirationDate.toUTCString()}; path=/`;
-      document.cookie = `cookies_policy_signature=${signature}; expires=${expirationDate.toUTCString()}; path=/`;
+      document.cookie = `cookies_policy=${encryptedData}; expires=${expirationDate.toUTCString()}; path=/; domain=rensr.pt`;
+      document.cookie = `cookies_policy_signature=${signature}; expires=${expirationDate.toUTCString()}; path=/; domain=rensr.pt`;
 
       window.location.reload();
     }

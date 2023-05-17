@@ -80,7 +80,29 @@
   "Su email": "Your email",
   "Asunto": "Subject",
   "Mensaje": "Message",
-  "Enviar": "Send"
+  "Enviar": "Send",
 
+
+  "Esta web utiliza Cookies": "This website uses Cookies",
+  "Personalizar": "Customize",
+  "Aceptar todas": "Accept all",
+  "Rechazar todas": "Reject all",
+  "Guardar configuración": "Save configuration",
+  "Ver cookies": "See cookies",
+  "Cookies Técnicas": "Technical Cookies",
+  "Hola, mi portafolio online utiliza algunas cookies para mejorar y optimizar el contenido que deseo mostrarte. No te preocupes, podrás volver a modificar tu configuración desde el footer de esta web cuando quieras.": "Hello, my online portfolio uses some cookies to improve and optimize the content that I want to show you. Don't worry, you can go back to modify your configuration from the footer of this website whenever you want.",
+  "Estas cookies garantizan el buen funcionamiento de mi portafolio online, son usadas para ejecutar funciones vitales como por ejemplo la seguridad y la navegación. Por ese motivo son obligatorias.": "These cookies guarantee the proper functioning of my online portfolio, they are used to perform vital functions such as security and navigation. For that reason they are mandatory.",
+  "Esta cookie es usada por Google Recaptcha, es necesaria para la seguridad y la integridad de mi portafólio online.": "This cookie is used by Google Recaptcha, it is necessary for the security and integrity of my online portfolio.",
+  "Esta cookie es usada por mi portafolio online para recordar su desición sobre el uso de cookies y ajustar la web a su configuración de privacidad de datos.": "This cookie is used by my online portfolio to remember your decision about the use of cookies and adjust the website to your data privacy settings.",
+  "Esta es una cookie de seguridad para firmar la cookie de política de cookies.": "This is a security cookie to sign the cookie policy cookie.",
+  "Esta cookie es usada por Google Analytics para distinguir a los usuarios y me permite almacenar el numero de veces que mi portafolio online ha sido visitado.": "This cookie is used by Google Analytics to distinguish users and allows me to store the number of times my online portfolio has been visited.",
+  "Son aquéllas que le permitirán acceder a mi portafolio online con algunas características predefinidas y que dependiendo de las características de su dispositiov y/o navegador, servirán para ofrecer un mejor servicio, sirven por ejemplo para configurar el idioma, para adaptar el contenido al navegador/dispositivo que está utilizando, para guardar su configuración regional, etc.": "They are those that will allow you to access my online portfolio with some predefined characteristics and that depending on the characteristics of your device and / or browser, they will serve to offer a better service, they serve for example to configure the language, to adapt the content to the browser / device you are using, to save your regional configuration, etc.",
+  "Esta cookie propia de mi portafolio online y sirve para recordar el idioma que configuró.": "This own cookie of my online portfolio and serves to remember the language you configured.",
+  "Cookies Analíticas": "Analytical Cookies",
+  "Cookies de Personalización": "Personalization Cookies",
+  "Detalles": "Details",
+
+
+  "Revocar configuración de cookies": "Revoke cookie settings"
 
 }

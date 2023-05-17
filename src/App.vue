@@ -37,7 +37,6 @@ import FooterPage from "@/components/FooterPage";
 import CookiesPolicy from "@/components/popups/CookiesPolicy";
 
 
-
 export default {
   name: 'App',
   components: {
@@ -181,13 +180,30 @@ export default {
       //If user configured cookies disallow all the CookiesPolicy will set all cookies options to false then return this false
       return false;
 
-    },
+    }
   },
-    created() {
-      this.revalidateCookies();
-      this.lang_cookie = this.thisCookieIsAllowed("lang_cookie");
-    },
+  created() {
+    //Disable
 
+    this.revalidateCookies();
+    this.lang_cookie = this.thisCookieIsAllowed("lang_cookie");
+  },
+  mounted() {
+    //Validates is google analytics is allowed
+    if(this.thisCookieIsAllowed("_ga")){
+      this.$gtag.optIn();
+      this.$gtag.pageview('/');
+    }
+
+    // this.$gtag.event('evento', {
+    //   event_category: 'categoría',
+    //   event_label: 'etiqueta',
+    //   value: 'valor'
+    // });
+  },
+  beforeCreate() {
+    this.$gtag.optOut();
+  }
 
 
 

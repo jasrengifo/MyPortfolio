@@ -8,6 +8,8 @@ import i18n from "@/assets/js/i18n";
 
 import VueCryptojs from 'vue-cryptojs'
 
+import VueGtag from 'vue-gtag'
+
 
 
 
@@ -17,7 +19,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons fab */
-import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faRedditAlien } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 /* import specific icons fas, fa */
 import { faPlane, faCircleInfo,faEarthAmericas,faLaptopCode, faShoppingCart, faChartBar, faUtensils, faHome, faPaintBrush, faGamepad, faArrowUp, faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
@@ -28,10 +30,13 @@ import { faTimesCircle } from '@fortawesome/free-regular-svg-icons'
 
 
 /* add icons to the library */
-library.add(faFacebookF, faCircleInfo, faInstagram, faArrowLeft, faLinkedinIn, faTwitter, faRedditAlien, faPlane, faLaptopCode, faEarthAmericas,faShoppingCart, faChartBar, faUtensils, faHome, faPaintBrush, faGamepad, faArrowUp, faBars, faTimesCircle)
+library.add(faFacebookF, faCircleInfo, faInstagram, faArrowLeft, faLinkedinIn, faTwitter, faGithub, faPlane, faLaptopCode, faEarthAmericas,faShoppingCart, faChartBar, faUtensils, faHome, faPaintBrush, faGamepad, faArrowUp, faBars, faTimesCircle)
 
 
 
 
 
-createApp(App).use(i18n).use(VueCryptojs).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
+createApp(App).use(VueGtag, {
+    config: { id: 'G-8HD7E56HT4' },
+    enabled: false
+}).use(i18n).use(VueCryptojs).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
