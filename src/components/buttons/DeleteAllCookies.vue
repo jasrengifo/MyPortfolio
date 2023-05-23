@@ -37,6 +37,7 @@ export default {
   letter-spacing: 1px;
   padding: 5px 10px;
   border-radius: 5px;
+
 }
 
 

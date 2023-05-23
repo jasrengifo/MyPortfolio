@@ -22,6 +22,8 @@
   <FooterPage></FooterPage>
 
   <CookiesPolicy @revalidate-cookies="revalidateCookies()" :lls="lls" v-if="cookiesRequested == false"></CookiesPolicy>
+
+
 </template>
 
 <script>
@@ -35,6 +37,7 @@ import MyPortfolio from "@/components/HomePage/MyPortfolio";
 import ContactNow from "@/components/HomePage/ContactNow";
 import FooterPage from "@/components/FooterPage";
 import CookiesPolicy from "@/components/popups/CookiesPolicy";
+
 
 
 export default {
@@ -120,7 +123,7 @@ export default {
 
         this.allowed_cookies = cookiesPolicy;
       } else {
-        console.log("the cookies policy signature is not valid");
+        // console.log("the cookies policy signature is not valid");
       }
 
       if (value === null) {
@@ -193,7 +196,13 @@ export default {
     if(this.thisCookieIsAllowed("_ga")){
       this.$gtag.optIn();
       this.$gtag.pageview('/');
+
     }
+
+    console.log("%cWait a bit!","color: green; font-size: 30px; font-weight: 700");
+    console.log("%cIf someone has asked you to copy and paste something here, it is very likely that they want to scam you.","color: red; font-size: 14px; font-weight: 700");
+    console.log("%cPasting anything here could give attackers access to steal your information.","color: red; font-size: 14px; font-weight: 700");
+    console.log("%cUnless you understand exactly what you are doing, close this window and stay safe.","font-size: 14px; font-weight: 700");
 
     // this.$gtag.event('evento', {
     //   event_category: 'categoría',

@@ -10,6 +10,9 @@ import VueCryptojs from 'vue-cryptojs'
 
 import VueGtag from 'vue-gtag'
 
+import VueAnimated from '@codekraft-studio/vue-animated'
+
+
 
 
 
@@ -39,4 +42,4 @@ library.add(faFacebookF, faCircleInfo, faInstagram, faArrowLeft, faLinkedinIn, f
 createApp(App).use(VueGtag, {
     config: { id: 'G-8HD7E56HT4' },
     enabled: false
-}).use(i18n).use(VueCryptojs).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
+}).use(VueAnimated).use(i18n).use(VueCryptojs).component('font-awesome-icon', FontAwesomeIcon).mount('#app')

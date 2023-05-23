@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com');
-@import url('https://fonts.gstatic.com');
+/*@import url('https://fonts.googleapis.com');*/
+/*@import url('https://fonts.gstatic.com');*/
 @import url('https://fonts.googleapis.com/css2?family=Yrsa:ital,wght@1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
@@ -8,8 +8,19 @@
 *{
     --main-dark: #1E2326;
     --sec-green: #1CB698;
+    --sec-green-hover: #0f8c70;
     --ter-dark: #252a2e;
     --quar-dark: #191e21;
+}
+
+.btn-primary{
+    background-color: var(--sec-green);
+}
+
+.btn-primary:hover{
+    background-color: var(--sec-green-hover);
+    border-color: var(--sec-green-hover)!important;
+    color: white!important;
 }
 
 
@@ -166,13 +177,13 @@ header .header-card .darktable {
 }
 
 
-.section-title .titulo {
+.section-title .titulo, .project-details .titulo {
     position: relative;
 }
 
 
 
-.section-title .titulo:before {
+.section-title .titulo:before, .project-details .titulo:before {
     content: '';
     display: inline-block;
     position: absolute;
@@ -187,7 +198,7 @@ header .header-card .darktable {
 }
 
 
-.section-title .titulo:after {
+.section-title .titulo:after, .project-details .titulo:after {
     content: '';
     display: inline-block;
     position: absolute;
