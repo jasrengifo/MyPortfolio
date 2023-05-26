@@ -20,18 +20,18 @@
           <div class="row mw-100 mt-5">
             <div class="col-lg-12">
               <p>
-                {{ projectinfo.details.desc }}
+                {{ $t(projectinfo.details.desc) }}
               </p>
             </div>
 
-            <div class="col-lg-12 text-end mb-4">
-              <a :href="projectinfo.details.url" class="btn btn-primary" target="_blank">Visitar proyecto</a>
+            <div class="col-lg-12 text-end mb-4" v-if="projectinfo.details.url!=''">
+              <a :href="projectinfo.details.url" class="btn btn-primary" target="_blank">{{ $t("Visitar proyecto") }}</a>
             </div>
 
-            <div class="col-lg-12 ">
+            <div class="col-lg-12 " v-if="projectinfo.details.img.length>0">
 
               <div class="row">
-                <div class="titulo mb-4 text-center"><h3>Imagenes del proyecto</h3></div>
+                <div class="titulo mb-4 text-center"><h3>{{ $t("Imagenes del proyecto") }}</h3></div>
                 <div class="col-md-4 image-item mb-3" v-for="image in projectinfo.details.img" :key="image.id">
                   <img :src="image.url" :alt="image.name" class="project-image-item max-w" />
                 </div>
@@ -41,10 +41,10 @@
 
             </div>
             <div class="col-lg-12">
-              <div class="titulo mb-4 text-center mt-4"><h3>Detalles Técnicos</h3></div>
+              <div class="titulo mb-4 text-center mt-4"><h3>{{ $t("Detalles Técnicos") }}</h3></div>
               <div class="datos-tecnicos">
 
-                  <div v-for="tech in projectinfo.details.techs" :key="tech.id">{{ tech }}</div>
+                  <div v-for="tech in projectinfo.details.techs" :key="tech.id">{{ $t(tech) }}</div>
 
               </div>
             </div>
@@ -109,7 +109,6 @@ export default {
     left: 0px;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
     z-index: 10;
   }
 
